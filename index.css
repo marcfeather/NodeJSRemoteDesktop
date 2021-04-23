@@ -1,0 +1,24 @@
+body {
+    background-color: dimgrey;
+}
+
+.arrow {
+    display: inherit;
+    font-size: 25px;
+}
+
+div {
+    display: inline;
+    width: auto;
+    height: auto;
+    border: 3px solid green;
+}
+
+div:hover {
+    background-color: black;
+}
+
+img {
+    display: inherit;
+    margin-right: 0;
+}

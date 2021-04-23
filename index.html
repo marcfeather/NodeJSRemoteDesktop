@@ -1,5 +1,85 @@
 <html>
-    <body>
-        <h1>Hello World</h1>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="./videocapture.js"></script>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body id="body">
+        <div>
+        <p class="arrow">&#10533;</p>
+        <img id="img" src="folder.png" width="50">
+        </div>
+        <script>
+            const image = document.getElementById("img");
+
+
+        </script>
+        <!--<h1>Number of people streaming right now: <span id='streamCount'></span></h1>
+        <button id="button">Start Capture</button>
+        <button id="buttonStop">Stop Capture</button>
+        <video id="video" autoplay></video>
+        <script src="./videocapture.js"></script> ------------------- &#10533;
+        <script>
+            const socket = io('http://localhost:80');
+
+            socket.on('connection');
+
+            socket.on('updateViewCount', (data) => {
+                getStreamCount().then((streamCount) => {
+                    peopleStreaming.innerText = streamCount;
+                });
+            });
+
+            const sendMessage = () => {
+                socket.emit('message', 'Hello World');
+            };
+
+            
+
+        </script>
+        <!--<script>
+            const videoSrc = document.getElementById("video");
+
+            async function captureBegin(mediaOptions) {
+                let captureStream = null;
+
+                try {
+                    videoSrc.srcObject = await navigator.mediaDevices.getDisplayMedia(mediaOptions);
+                } catch (e) {
+                    console.error("Error: " + e);
+                }
+            }
+            function startCapture() {
+                var mediaOptions = {
+                    video = {
+                        cursor: "always"
+                    },
+                    audio: false
+                };
+
+                captureBegin(mediaOptions);
+
+            }
+
+            /*if ('geolocation' in navigator) {
+                navigator.geolocation.getCurrentPosition(async position => {
+                    console.log(`Latitude: ${position.coords.latitude}\nLongitude: ${position.coords.longitude}`);
+                    const lat = position.coords.latitude
+                    const lon = position.coords.longitude
+
+                    const data = { lat, lon };
+                    const options = {
+                        method: 'POST',
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify(data),
+                    };
+                    const response = await fetch('/',  options);
+                    const data2 = await response.json();
+                    console.log(data2);
+                });
+            }*/
+        </script> -->
     </body>
 </html>
